@@ -1,12 +1,6 @@
-<div class="logout-container">
-  <a class="btn btn-secondary" href="/admin/login/logout">Cerrar sesion<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-  </svg></a>
-  
-</div>
-<br><br>
-<div class="container" style="margin:50px auto; box-shadow: 2px 2px 2px 1px #333; padding-top:5px">
+
+
+<div class="container" style="margin: auto; box-shadow: 2px 2px 2px 1px #333; padding-top:5px" data-aos="fade-up" data-aos-duration="1500">
    
     <div class="row" >
         <div class="col-7">
@@ -14,7 +8,7 @@
 
         </div>
         <div class="col text-end">
-            <a href="" class="btn btn-secondary"><i class="fa fa-plus"></i> Nuevo</a>
+            <a href="/admin/novedades/agregarnovedad" class="btn btn-secondary"><i class="fa fa-plus"></i> Nuevo</a>
 
         </div>
 
@@ -37,11 +31,11 @@
                         <th scope="row">{{id}}</th>
                         <td>{{titulo}}</td>
                         <td>{{descripcion}}</td>
-                        <td>{{imagen}}</td>
+                        <td>{{{imagen}}}</td>
 
                         <td class="text-end">
-                            <a href="#" title="Editar" class="btn btn-sm btn-secondary"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="#" title="Eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
+                            <a href="/admin/novedades/modificarnovedad/{{id}}" title="Editar" class="btn btn-sm btn-secondary"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="/admin/novedades/eliminarnovedad/{{id}}" title="Eliminar" class="btn btn-sm btn-secondary"><i class="fa fa-trash"></i></a>
                             
                         </td>
                     </tr>

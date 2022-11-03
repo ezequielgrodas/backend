@@ -1,0 +1,41 @@
+
+
+<div class="formulario-container" style="margin: auto;">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h5>Modificar el evento</h5>
+            <form action="/admin/eventos/modificarevento" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{evento.id}}" name="id">
+                <div class="form-group">
+                    <label for="">Titulo</label>                    
+                    <input type="text" class="form-control" name="titulo" value="{{evento.titulo}}"><br>
+                <div class="form-group">
+                    <label for="">Descripcion</label>
+                    <textarea type="text" class="form-control" name="descripcion" >{{evento.descripcion}}</textarea><br>
+                <div class="form-group">
+                    <label for="">Info</label>
+                    <textarea type="text" class="form-control" name="info" >{{evento.info}}</textarea><br>    
+                <div class="form-group">
+                    <p>
+                        <input class="form-control" type="file" id="formFile" name="imagen"><br>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1" />Eliminar imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{evento.img_id}}"/>
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-secondary">Guardar</button>
+                </div>
+ 
+                </div>
+{{#if error}}
+            <p>{{message}}</p>
+            {{/if}}
+            </form>
+            
+        </div>
+
+    </div>
+
+</div>
+

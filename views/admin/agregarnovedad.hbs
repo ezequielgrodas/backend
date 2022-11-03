@@ -1,0 +1,29 @@
+
+
+<div class="formulario-container" style="margin: auto;">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h5>Agregar una nueva novedad</h5>
+            <form action="/admin/novedades/agregarnovedad" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Titulo" name="titulo"><br>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" placeholder="Descripcion" name="descripcion"></textarea><br>
+                <div class="form-group">
+                    {{!-- <label><input type="file" name="imagen" id="formFile" /></label> --}}
+                    <input class="form-control" type="file" id="formFile" name="imagen"><br>
+                </div>
+                <button type="submit" class="btn btn-secondary">Guardar</button>
+                </div>
+
+                </div>
+
+            </form>
+            {{#if error}}
+            <p>{{message}}</p>
+            {{/if}}
+        </div>
+
+    </div>
+
+</div>

@@ -6,13 +6,14 @@ main {
 }
 /* ESTILOS FOOTER */
 .footer {
+  
   background-color:#ccc;
   clear: both;
   color: #333;
   padding: 3em 0;
-  margin-top: 1px;
+  margin-top: 5em;
   text-align: center;
-  position: fixed;
+  
   bottom: 0px;
   width: 100%;
 }
@@ -37,9 +38,10 @@ main {
   height: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4em;
+  margin-top: 5em;
   text-align: center;
   box-shadow: 2px 2px 2px 1px #333;
+  margin-bottom: auto;
   
 
   transition: all 0.3s ease-in-out;
@@ -151,4 +153,13 @@ main {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }
-
+.elementoformulario{
+  margin-bottom: 0.5em;
+  
+}
+.formulario-container{
+  box-shadow: 2px 2px 2px 1px #333;
+  width: 60%;
+  height: auto;
+  padding: 1%;
+}

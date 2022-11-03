@@ -1,0 +1,41 @@
+
+
+<div class="formulario-container" style="margin: auto;">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h5>Modificar el lanzamiento</h5>
+            <form action="/admin/lanzamientos/modificarlanzamiento" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{lanzamiento.id}}" name="id">
+                <div class="form-group">
+                    <label for="">Artista</label>                    
+                    <input type="text" class="form-control" name="artista" value="{{lanzamiento.artista}}">
+                <div class="form-group">
+                    <label for="">Titulo</label>
+                    <textarea type="text" class="form-control" name="titulo" >{{lanzamiento.titulo}}</textarea>
+                <div class="form-group">
+                    <label for="">Descripcion</label>
+                    <textarea type="text" class="form-control" name="descripcion" >{{lanzamiento.descripcion}}</textarea>    
+                <div class="form-group">
+                    <p>
+                        <input class="form-control" type="file" id="formFile" name="imagen"><br>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1" />Eliminar imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{lanzamiento.img_id}}"/>
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-secondary">Guardar</button>
+                </div>
+ 
+                </div>
+{{#if error}}
+            <p>{{message}}</p>
+            {{/if}}
+            </form>
+            
+        </div>
+
+    </div>
+
+</div>
+
